@@ -1,0 +1,43 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "IkLitEJNZjFeTzwPzYVZF5/TJsc=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "60d456a402782453be397030407e34decaf04d73",
+			"revisionTime": "2018-12-02T17:10:36Z"
+		},
+		{
+			"checksumSHA1": "l1YNkb6/66PSOUhUDgzphOd7Z3Y=",
+			"path": "github.com/gorilla/mux",
+			"revision": "d2b5d13b9260193b5a5649e9f47fda645bd2bd1d",
+			"revisionTime": "2018-12-08T20:40:53Z"
+		},
+		{
+			"checksumSHA1": "GWZt8djqK/GoHgon8POT508+BXM=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "5ad6f621e6f59672f5b5061df85b243436fde048",
+			"revisionTime": "2018-12-13T13:04:51Z"
+		},
+		{
+			"checksumSHA1": "eECxSkwh0WmhLwaxHfkvcLOWS08=",
+			"path": "github.com/jinzhu/gorm/dialects/mysql",
+			"revision": "5ad6f621e6f59672f5b5061df85b243436fde048",
+			"revisionTime": "2018-12-13T13:04:51Z"
+		},
+		{
+			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "04140366298a54a039076d798123ffa108fff46c",
+			"revisionTime": "2018-03-08T03:36:59Z"
+		},
+		{
+			"checksumSHA1": "I+g5iffd0bNDiI8swxzsHiJxBz0=",
+			"path": "github.com/joho/godotenv",
+			"revision": "69ed1d913aa885da390dd6de9febf063d101b097",
+			"revisionTime": "2018-11-20T19:47:48Z"
+		}
+	],
+	"rootPath": "trends"
+}
