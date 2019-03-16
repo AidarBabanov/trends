@@ -1,7 +1,6 @@
 package main
 
 import (
-	"./database"
 	"fmt"
 	"github.com/gorilla/mux"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -10,6 +9,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"trends/database"
+	"trends/models"
 )
 
 const (
@@ -32,6 +33,8 @@ func main() {
 	if err2 != nil {
 		log.Fatal(err2)
 	}
+
+	database.DB.AutoMigrate(models.Trends{})
 
 	// Setting application port
 	port := os.Getenv("app_port")
