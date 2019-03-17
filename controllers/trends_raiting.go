@@ -8,7 +8,7 @@ import (
 	"trends/models"
 )
 
-func create(w http.ResponseWriter, r *http.Request) {
+func Create(w http.ResponseWriter, r *http.Request) {
 	var trends []models.Trends
 	decoder := json.NewDecoder(r.Body)
 	if err := decoder.Decode(&trends); err != nil {
@@ -26,8 +26,9 @@ func create(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, map[string]string{"message": "OK"})
 }
 
-func get(w http.ResponseWriter, r *http.Request) {
-	db:=database.DB
+func Get(w http.ResponseWriter, r *http.Request) {
+	db := database.DB
 	var trends []models.Trends
 	db.Find(&trends).Order("created_at").Order("value")
+	respondWithJSON(w, http.StatusOK, trends)
 }

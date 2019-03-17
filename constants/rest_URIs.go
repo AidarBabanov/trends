@@ -1,6 +1,6 @@
 package constants
 
-const(
-	ApiURI = ""
-	RatingURI = "/rating"
+const (
+	ApiURI    = ""
+	TrendsURI = "/trends"
 )

@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"trends/constants"
+	"trends/controllers"
 	"trends/database"
 	"trends/models"
 )
@@ -48,7 +50,8 @@ func main() {
 	log.Println("Setting router and controllers.")
 	router := mux.NewRouter()
 
-	//router.HandleFunc(c.RegisterURI, contr.Register).Methods(POST)
+	router.HandleFunc(constants.TrendsURI, controllers.Create).Methods(POST)
+	router.HandleFunc(constants.TrendsURI, controllers.Get).Methods(GET)
 
 	// Setting server
 	log.Println("Router and controllers set successfully.")
