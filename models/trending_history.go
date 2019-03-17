@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Trends struct {
-	Topic     string     `json:"name"`
-	TrackedAt *time.Time `json:"-"`
-	Value     int64      `json:"value"`
+	Topic     string `json:"name"`
+	TrackedAt *time.Time
+	Value     int64 `json:"value"`
 }
