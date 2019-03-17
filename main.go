@@ -52,6 +52,7 @@ func main() {
 
 	router.HandleFunc(constants.TrendsURI, controllers.Create).Methods(POST)
 	router.HandleFunc(constants.TrendsURI, controllers.Get).Methods(GET)
+	router.HandleFunc(constants.TrendsURI, controllers.Delete).Methods(DELETE)
 
 	// Setting server
 	log.Println("Router and controllers set successfully.")

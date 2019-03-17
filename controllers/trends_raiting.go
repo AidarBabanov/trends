@@ -34,3 +34,9 @@ func Get(w http.ResponseWriter, r *http.Request) {
 	db.Find(&trends).Order("created_at").Order("value")
 	respondWithJSON(w, http.StatusOK, trends)
 }
+
+func Delete(w http.ResponseWriter, r *http.Request) {
+	db := database.DB
+	db.DropTableIfExists(models.Trends{})
+	respondWithJSON(w, http.StatusOK, map[string]string{"message": "OK"})
+}
