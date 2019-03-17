@@ -7,3 +7,9 @@ type Trends struct {
 	TrackedAt *time.Time
 	Value     int64 `json:"value"`
 }
+
+type GainingTrend struct {
+	Topic     string `json:"name"`
+	TrackedAt *time.Time
+	Value     int64 `json:"value"`
+}

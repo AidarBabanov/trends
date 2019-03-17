@@ -1,6 +1,7 @@
 package constants
 
 const (
-	ApiURI    = ""
-	TrendsURI = "/trends"
+	ApiURI     = ""
+	TrendsURI  = "/trends"
+	GainingURI = "/gaining-trend"
 )

@@ -37,6 +37,7 @@ func main() {
 	}
 
 	database.DB.AutoMigrate(models.Trends{})
+	database.DB.AutoMigrate(models.GainingTrend{})
 
 	// Setting application port
 	port := os.Getenv("app_port")
@@ -53,6 +54,10 @@ func main() {
 	router.HandleFunc(constants.TrendsURI, controllers.Create).Methods(POST)
 	router.HandleFunc(constants.TrendsURI, controllers.Get).Methods(GET)
 	router.HandleFunc(constants.TrendsURI, controllers.Delete).Methods(DELETE)
+
+	router.HandleFunc(constants.GainingURI, controllers.Create2).Methods(POST)
+	router.HandleFunc(constants.GainingURI, controllers.Get2).Methods(GET)
+	router.HandleFunc(constants.GainingURI, controllers.Delete2).Methods(DELETE)
 
 	// Setting server
 	log.Println("Router and controllers set successfully.")
