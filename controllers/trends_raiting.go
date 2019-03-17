@@ -9,6 +9,8 @@ import (
 )
 
 func Create(w http.ResponseWriter, r *http.Request) {
+	database.DB.AutoMigrate(models.Trends{})
+
 	var trends []models.Trends
 	decoder := json.NewDecoder(r.Body)
 	if err := decoder.Decode(&trends); err != nil {
